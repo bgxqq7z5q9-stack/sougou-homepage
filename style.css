@@ -1,6 +1,5 @@
-/* 全体の背景色を水色（いろは水色）に設定 */
 body {
-    background-color: #E0FFFF; /* ライトシアン（水色系） */
+    background-color: #E0FFFF; 
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
     padding: 0;
@@ -10,37 +9,36 @@ body {
 
 header {
     display: flex;
-    align-items: center; /* 画像とテキストを垂直方向中央に揃える */
+    align-items: center; 
     padding: 10px 20px;
-    background-color: #B0E0E6; /* ヘッダーの背景色を少し濃い水色に */
+    background-color: #B0E0E6;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
 .logo {
-    /* 左上に配置（flexコンテナ内で自動的に左寄りになる） */
-    width: 50px; /* 画像のサイズを調整してください */
+    width: 50px;
     height: auto;
-    margin-right: 15px; /* タイトルとの間にスペースを空ける */
+    margin-right: 15px;
 }
 
 h1 {
     margin: 0;
     font-size: 24px;
-    color: #008B8B; /* 濃いめのシアンで目立たせる */
+    color: #008B8B;
 }
 
 main {
     display: flex;
-    justify-content: center; /* コンテンツを水平方向中央に配置 */
+    justify-content: center; 
     padding: 20px;
 }
 
 .content-container {
-    background-color: #FFFFFF; /* 説明部分の背景を白にして読みやすく */
+    background-color: #FFFFFF; 
     padding: 30px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    max-width: 700px; /* 説明文の最大幅を制限して読みやすく */
+    max-width: 700px; 
     width: 100%;
 }
 
