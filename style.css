@@ -62,3 +62,42 @@ footer {
     width: 100%;
     font-size: 14px;
 }
+
+.button-link {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #008B8B; 
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    transition: background-color 0.3s;
+}
+
+.button-link:hover {
+    background-color: #005f5f; 
+}
+
+
+.monster-gallery {
+    display: flex;
+    flex-wrap: wrap; 
+    gap: 20px; 
+    justify-content: center; 
+}
+
+.monster-item {
+    text-align: center;
+    border: 1px solid #B0E0E6;
+    padding: 10px;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    width: 150px; 
+}
+
+.monster-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
