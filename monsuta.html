@@ -6,6 +6,25 @@
     <title>モンスター図鑑 | はるみタイピング</title>
     <link rel="icon" href="ringojiru.png" type="image/png">
     <link rel="stylesheet" href="style.css"> 
+    
+    <!-- ここから音楽再生用の追加コード -->
+    <audio id="background-music" src="お店.mp3" preload="auto"></audio>
+    <script>
+        window.onload = function() {
+            const audio = document.getElementById('background-music');
+            const playPromise = audio.play();
+
+            if (playPromise !== undefined) {
+                playPromise.then(() => {
+                    console.log("音楽を再生しました。");
+                }).catch(error => {
+                    console.log("自動再生がブロックされました。ユーザーの操作が必要です。");
+                });
+            }
+        };
+    </script>
+    <!-- ここまで音楽再生用の追加コード -->
+
 </head>
 <body>
     <header>
@@ -17,42 +36,54 @@
         <div class="content-container">
             <h2>モンスター図鑑</h2>
             <p>
-                ゲーム内に出現するモンスターたちです。タイピングで倒しましょう！
+                ゲーム内に出現するモンスターたちです。タップすると拡大表示されます。
             </p>
 
             <div class="monster-gallery">
-                <!-- モンスター1 -->
+                <!-- モンスター1: リンクを追加 -->
                 <div class="monster-item">
-                    <img src="monsuta-1.png" alt="モンスター1">
+                    <a href="monsuta-1.png" target="_blank">
+                        <img src="monsuta-1.png" alt="モンスター1">
+                    </a>
                 </div>
-                <!-- モンスター2 -->
+                <!-- モンスター2: リンクを追加 -->
                 <div class="monster-item">
-                    <img src="monsuta-2.png" alt="モンスター2">
+                    <a href="monsuta-2.png" target="_blank">
+                        <img src="monsuta-2.png" alt="モンスター2">
+                    </a>
                 </div>
-                <!-- モンスター3 -->
+                <!-- モンスター3: リンクを追加 -->
                 <div class="monster-item">
-                    <img src="monsuta-3.png" alt="モンスター3">
+                    <a href="monsuta-3.png" target="_blank">
+                        <img src="monsuta-3.png" alt="モンスター3">
+                    </a>
                 </div>
-                <!-- モンスター4 -->
+                <!-- モンスター4: リンクを追加 -->
                 <div class="monster-item">
-                    <img src="monsuta-4.png" alt="モンスター4">
+                    <a href="monsuta-4.png" target="_blank">
+                        <img src="monsuta-4.png" alt="モンスター4">
+                    </a>
                 </div>
-                <!-- モンスター5 -->
+                <!-- モンスター5: リンクを追加 -->
                 <div class="monster-item">
-                    <img src="monsuta-5.png" alt="モンスター5">
+                    <a href="monsuta-5.png" target="_blank">
+                        <img src="monsuta-5.png" alt="モンスター5">
+                    </a>
                 </div>
-                <!-- モンスター6 -->
+                <!-- モンスター6: リンクを追加 -->
                 <div class="monster-item">
-                    <img src="monsuta-6.png" alt="モンスター6">
+                    <a href="monsuta-6.png" target="_blank">
+                        <img src="monsuta-6.png" alt="モンスター6">
+                    </a>
                 </div>
-                <!-- モンスター6 -->
+                <!-- モンスター7: リンクを追加 -->
                 <div class="monster-item">
-                    <img src="monsuta-7.png" alt="モンスター7">
+                    <a href="monsuta-7.png" target="_blank">
+                        <img src="monsuta-7.png" alt="モンスター7">
+                    </a>
                 </div>
             </div>
-            </div>
-
-
+            
             <a href="index.html" class="button-link">ホームへ戻る</a>
 
         </div>
