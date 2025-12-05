@@ -8,21 +8,30 @@
     <link rel="icon" href="ringojiru.png" type="image/png">
     <link rel="stylesheet" href="style.css"> 
     
-    <audio id="background-music" src="お店の曲.mp3" preload="auto"></audio>
+<audio id="background-music" src="お店の曲.mp3" loop preload="auto"></audio>
+    
     <script>
+        // ページ読み込み完了後に実行
         window.onload = function() {
             const audio = document.getElementById('background-music');
-            const playPromise = audio.play();
 
-            if (playPromise !== undefined) {
-                playPromise.then(() => {
-                    console.log("音楽を再生しました。");
+            // ページ上のどこかがクリック（タップ）された時のイベントリスナーを設定
+            document.body.addEventListener('click', function handleFirstClick() {
+                // 音楽の再生を試みる
+                audio.play().then(() => {
+                    console.log("ユーザー操作により音楽を再生しました。");
+                    // 再生に成功したら、これ以降自動再生ポリシーは適用されないため、
+                    // このイベントリスナーは削除する (一度だけ実行させる)
+                    document.body.removeEventListener('click', handleFirstClick);
                 }).catch(error => {
-                    console.log("自動再生がブロックされました。ユーザーの操作が必要です。");
+                    // 再生失敗時（ブラウザによっては、まだユーザー操作が不十分な場合など）
+                    console.error("音楽の再生に失敗しました:", error);
                 });
-            }
+            });
         };
     </script>
+
+
 
 
 </head>
